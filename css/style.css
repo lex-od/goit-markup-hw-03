@@ -1,26 +1,40 @@
+/* Colors */
+
 :root {
-  /* Main colors */
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --primary-text-color: #757575;
   --title-text-color: #212121;
-  --secondary-background-color: #f5f4fa;
-  /* Additional colors */
+  --secondary-bg-color: #f5f4fa;
+
   --logo-black-color: #000000;
   --addr-black-color: rgba(255, 255, 255, 0.6);
-  --footer-background-color: #2f303a;
+  --footer-bg-color: #2f303a;
+  --hero-btn-shadow-color: rgba(0, 0, 0, 0.15);
 }
 
-/* List reset */
+/* Elements */
+
 ul {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
-/* Headlines defaults */
+
+h1,
 h2,
 h3 {
   color: var(--title-text-color);
+
+  margin-top: 0;
 }
-/* Body init */
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
@@ -30,12 +44,31 @@ body {
   font-size: 14px;
   line-height: 1.14;
 }
-/* Footer init */
+
 footer {
-  background-color: var(--footer-background-color);
+  background-color: var(--footer-bg-color);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* General classes */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Logo */
+
 .logo-primary,
 .logo-secondary {
   color: var(--accent-color);
@@ -46,11 +79,18 @@ footer {
   line-height: 1.19;
   text-decoration: none;
 }
+
 .logo-primary > .logo-part {
   color: var(--logo-black-color);
 }
+
 .logo-secondary > .logo-part {
   color: var(--primary-white-color);
+}
+
+.logo-secondary {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 /* Navigation */
@@ -70,6 +110,7 @@ footer {
 }
 
 /* Contacts */
+
 .addr-primary > .addr-link {
   color: var(--primary-text-color);
 
@@ -78,16 +119,27 @@ footer {
   text-decoration: none;
   font-style: normal;
 }
+
 .addr-primary > .addr-link:hover,
 .addr-primary > .addr-link:focus {
   color: var(--accent-color);
 }
+
+.addr-primary > .addr-link:not(:last-child) {
+  margin-right: 50px;
+}
+
 .addr-secondary {
   color: var(--primary-white-color);
 
   font-style: normal;
   line-height: 1.71;
 }
+
+.addr-text {
+  margin-bottom: 9px;
+}
+
 .addr-secondary > .addr-link {
   color: var(--addr-black-color);
 
