@@ -154,6 +154,10 @@ body {
 }
 
 .addr-secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   color: var(--primary-white-color);
   font-style: normal;
   line-height: 1.71;
@@ -164,9 +168,6 @@ body {
 }
 
 .addr-secondary > .addr-link {
-  display: block;
-  width: max-content;
-
   color: var(--addr-black-color);
   text-decoration: none;
 }
